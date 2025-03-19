@@ -5,7 +5,7 @@ import { CryptoCurrency, CryptoData, Pair } from "../types"
 import { getCryptos, getCryptoPrice } from "../services/CryptoService"
 
 //Type
-type CryptoState = {
+type CryptoStateType = {
     cryptoCurrencies: CryptoCurrency[],
     resultCurrency: CryptoData,
     loading: boolean,
@@ -24,7 +24,7 @@ const initialState = {
 }
 
 //Store
-export const useCryptoStore = create<CryptoState>()(
+export const useCryptoStore = create<CryptoStateType>()(
     devtools(
         (set) => ({
             cryptoCurrencies: [],
